@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursion Project-2-2</title>
+
+    <!-- bootstrapの読み込み -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- googlefontsの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- cssの読み込み -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- jsの読み込み -->
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="l_header">
+      <h1 class="l_header-logo text-center h1 fw-bold p-4">
+        Battery Finder Program
+      </h1>
+      <p class="l_header-alert fw-bold text-center pb-2 text-danger">
+        初期の値は反映されていません!!!
+      </p>
+    </header>
+    <div class="l_contents">
+      <div class="l_contents_select-wrapper px-4 vh-100">
+        <form id="select" action="" onsubmit="return cancelSubmit()">
+          <div class="l_contents_select pt-5">
+            <p class="l_contact_select-name fw-bold mb-2">
+              Step1: Select your brand
+            </p>
+            <div class="l_contact_select-body w-50">
+              <select name="Step1" class="form-select select-brand">
+                <option>Cakon</option>
+                <option>Go MN</option>
+                <option>VANY</option>
+              </select>
+            </div>
+          </div>
+          <div class="l_contents_select pt-5">
+            <p class="l_contact_select-name fw-bold mb-2">
+              Step2: Select your model
+            </p>
+            <div class="l_contact_select-body w-50">
+              <select id="Cakon" name="Step2" class="form-select">
+                <option>ABC 3000M</option>
+                <option>ABC 5000M</option>
+                <option>ABC 7000M</option>
+                <option>ABC 9000M</option>
+                <option>ABC 9900M</option>
+              </select>
+              <select id="GoMN" name="Step2" class="form-select d-none">
+                <option>UIK 110C</option>
+                <option>UIK 210C</option>
+                <option>UIK 230C</option>
+                <option>UIK 250C</option>
+                <option>UIK 270C</option>
+              </select>
+              <select id="VANY" name="Step2" class="form-select d-none">
+                <option>CEV 1100P</option>
+                <option>CEV 1300P</option>
+                <option>CEV 1500P</option>
+                <option>CEV 1700P</option>
+                <option>CEV 1900P</option>
+              </select>
+            </div>
+          </div>
+          <div class="l_contents_select pt-5">
+            <p class="l_contact_select-name fw-bold mb-2">
+              Step3: Input accessory power
+              consumption（0〜100までの値を指定できます）
+            </p>
+            <div class="l_contact_select-body">
+              <input
+                type="number"
+                class="select-number p-2"
+                min="0"
+                max="100"
+                value="0"
+              />
+            </div>
+          </div>
+          <div class="l_contents_select pt-5">
+            <p class="l_contact_select-name fw-bold mb-2">
+              Step4: Choose your battery
+            </p>
+            <div id="battery-display" class="py-5"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
