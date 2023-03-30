@@ -2,6 +2,9 @@
 
 Battery Finder Program
 
+# URL
+https://yasuhironagahama.github.io/Recursion-Project-2-2/
+
 # Explain
 
 総消費電力に基づいて、カメラセットと互換性のあるすべての電池を表示し、満充電時にどれほど電池が持続するか表示します。
