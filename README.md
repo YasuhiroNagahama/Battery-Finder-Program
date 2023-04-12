@@ -12,7 +12,7 @@ Battery Finder Program
 
 # Demo
 
-https://user-images.githubusercontent.com/125679029/226226637-c518507b-2ffa-4b8f-856b-391d7cac83c7.mov
+https://user-images.githubusercontent.com/125679029/231315328-82b51023-2b50-4bb1-8287-d800051dbeca.mov
 
 # Features
 
