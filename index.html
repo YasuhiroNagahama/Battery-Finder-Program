@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recursion Project-2-2</title>
+    <title>Battery Finder Program</title>
 
     <!-- bootstrapの読み込み -->
     <link
@@ -30,79 +30,70 @@
     <script src="js/main.js" defer></script>
   </head>
   <body>
-    <header class="l_header">
-      <h1 class="l_header-logo text-center h1 fw-bold p-4">
+    <header class="header d-flex flex-column gap-2 py-4">
+      <h1 class="header-logo h1 fw-bold text-center text-white">
         Battery Finder Program
       </h1>
-      <p class="l_header-alert fw-bold text-center pb-2 text-danger">
+      <p class="header-alert fw-bold text-center text-white">
         初期の値は反映されていません!!!
       </p>
     </header>
-    <div class="l_contents">
-      <div class="l_contents_select-wrapper px-4 vh-100">
-        <form id="select" action="" onsubmit="return cancelSubmit()">
-          <div class="l_contents_select pt-5">
-            <p class="l_contact_select-name fw-bold mb-2">
-              Step1: Select your brand
-            </p>
-            <div class="l_contact_select-body w-50">
-              <select name="Step1" class="form-select select-brand">
-                <option>Cakon</option>
-                <option>Go MN</option>
-                <option>VANY</option>
-              </select>
-            </div>
+    <div class="contents py-5">
+      <form
+        class="select-form d-flex flex-column gap-3"
+        onsubmit="return false"
+      >
+        <div class="border border-4 border-dark p-4">
+          <p
+            class="selectbox-type h2 fw-bold border-bottom border-2 border-dark pb-4"
+          >
+            Step1 : Select your brand
+          </p>
+          <div class="selectbox-wrapper mt-4">
+            <select
+              id="select-brand"
+              class="h4 border border-2 border-dark p-2 rounded"
+            >
+              <option value="-">-</option>
+              <option value="Cakon">Cakon</option>
+              <option value="Go_MN">Go MN</option>
+              <option value="VANY">VANY</option>
+            </select>
           </div>
-          <div class="l_contents_select pt-5">
-            <p class="l_contact_select-name fw-bold mb-2">
-              Step2: Select your model
-            </p>
-            <div class="l_contact_select-body w-50">
-              <select id="Cakon" name="Step2" class="form-select">
-                <option>ABC 3000M</option>
-                <option>ABC 5000M</option>
-                <option>ABC 7000M</option>
-                <option>ABC 9000M</option>
-                <option>ABC 9900M</option>
-              </select>
-              <select id="GoMN" name="Step2" class="form-select d-none">
-                <option>UIK 110C</option>
-                <option>UIK 210C</option>
-                <option>UIK 230C</option>
-                <option>UIK 250C</option>
-                <option>UIK 270C</option>
-              </select>
-              <select id="VANY" name="Step2" class="form-select d-none">
-                <option>CEV 1100P</option>
-                <option>CEV 1300P</option>
-                <option>CEV 1500P</option>
-                <option>CEV 1700P</option>
-                <option>CEV 1900P</option>
-              </select>
-            </div>
+        </div>
+        <div class="border border-4 border-dark p-4">
+          <p
+            class="selectbox-type h2 fw-bold border-bottom border-2 border-dark pb-4"
+          >
+            Step2: Select your model
+          </p>
+          <div id="model-box" class="selectbox-wrapper mt-4"></div>
+        </div>
+        <div class="border border-4 border-dark p-4">
+          <p
+            class="input-type h2 fw-bold border-bottom border-2 border-dark pb-4"
+          >
+            Step3: Input accessory power consumption
+            <br /><span class="h6 text-danger"
+              >（0〜100までの値を指定できます）</span
+            >
+          </p>
+          <div class="input-wrapper">
+            <input
+              type="number"
+              id="input-power"
+              class="border border-2 border-dark rounded p-2"
+              min="0"
+              max="100"
+              value="0"
+            />
           </div>
-          <div class="l_contents_select pt-5">
-            <p class="l_contact_select-name fw-bold mb-2">
-              Step3: Input accessory power
-              consumption（0〜100までの値を指定できます）
-            </p>
-            <div class="l_contact_select-body">
-              <input
-                type="number"
-                class="select-number p-2"
-                min="0"
-                max="100"
-                value="0"
-              />
-            </div>
-          </div>
-          <div class="l_contents_select pt-5">
-            <p class="l_contact_select-name fw-bold mb-2">
-              Step4: Choose your battery
-            </p>
-            <div id="battery-display" class="py-5"></div>
-          </div>
-        </form>
+        </div>
+      </form>
+
+      <div class="battery-list-wrapper bg-dark p-2 mt-5">
+        <p class="h2 fw-bold text-white">Step4: Choose your battery</p>
+        <ul id="battery-list" class="d-flex flex-column gap-4 p-4"></ul>
       </div>
     </div>
   </body>
