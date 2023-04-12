@@ -8,15 +8,11 @@ https://yasuhironagahama.github.io/Battery-Finder-Program/
 
 # Explain
 
-総消費電力に基づいて、カメラセットと互換性のあるすべての電池を表示し、満充電時にどれほど電池が持続するか表示します。
+電池のデータセット（電池名、容量（Ah）、電圧、最大放電電流（A）、終止電圧）、カメラのデータセット（メーカー、製品名、消費電力（Wh ワット時間））、選択されたブランド、モデル、パワーをもとに、使用できるバッテリーのリストを表示します。
 
 # Demo
 
 https://user-images.githubusercontent.com/125679029/231315328-82b51023-2b50-4bb1-8287-d800051dbeca.mov
-
-# Features
-
-* アルファベット順に並び替えることができなかった。
 
 # Author
 
